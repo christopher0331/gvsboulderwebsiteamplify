@@ -1,0 +1,202 @@
+.imageSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.featuredTitle {
+    display: flex;
+    font-size: 50px;
+    color: white;
+}
+
+.primaryImageBox {
+    display: flex;
+    width: 800px;
+    height: 600px;
+}
+
+.primaryImage {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    border: 2px solid darkgreen;
+}
+
+
+
+.secondaryCarousel {
+    display: flex; 
+    flex-wrap: wrap;
+    width: 800px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.secondaryImages {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 2px solid darkgreen;
+    margin: 10px 5px;
+}
+
+#projectLeftArrow {
+    position: relative;
+    color: white;
+    font-size: 45px;
+    top: 50%;
+    left: -675px;
+    transition: all .2s ease-in-out; 
+}
+
+#projectLeftArrow:hover {
+    position: relative;
+    color: white;
+    top: 50%;
+    left: -675px;
+    transform:scale(1.5);
+}
+
+#projectRightArrow {
+    position: relative;
+    color: white;
+    font-size: 45px;
+    top: 50%;
+    left: -120px;
+    transition: all .2s ease-in-out; 
+
+}
+
+#projectRightArrow:hover {
+    position: relative;
+    color: white;
+    top: 50%;
+    left: -120px;
+    transform:scale(1.5);
+}
+.smallImages {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255, 0, 0, 0);
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px){
+    .imageSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px;
+    }
+    
+    .featuredTitle {
+        display: flex;
+        font-size: 50px;
+        color: white;
+    }
+    
+    .primaryImage {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        border: 2px solid darkgreen;
+    }
+    
+    .primaryImageBox {
+        display: flex;
+        width: 280px;
+        height: 200px;
+        border: 2px solid darkgreen;
+    }
+    
+    .secondaryCarousel {
+        display: flex; 
+        flex-wrap: wrap;
+        width: 470px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    .secondaryImages {
+        display: flex;
+        width: 110px;
+        height: 110px;
+        border: 2px solid darkgreen;
+        margin: 10px 5px;
+    }
+    
+    #projectLeftArrow {
+        position: relative;
+        color: white;
+        font-size: 45px;
+        top: 50%;
+        left: -265px;
+        transition: all .2s ease-in-out; 
+    }
+    
+    #projectLeftArrow:hover {
+        position: relative;
+        color: white;
+        top: 50%;
+        left: -265px;
+        transform:scale(1.5);
+    }
+    
+    #projectRightArrow {
+        position: relative;
+        color: white;
+        font-size: 45px;
+        top: 50%;
+        left: -110px;
+        transition: all .2s ease-in-out; 
+    
+    }
+    
+    #projectRightArrow:hover {
+        position: relative;
+        color: white;
+        top: 50%;
+        left: -110px;
+        transform:scale(1.5);
+    }
+    .smallImages {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: red;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+.modal-image-container {
+    position: relative;
+  }
+  
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .next-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 24px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .next-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  

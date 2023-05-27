@@ -1,0 +1,355 @@
+/* Footer.css */
+footer {
+    background-color: #184b1d;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.footer-left {
+    flex-basis: 30%;
+  }
+  
+  .footer-left h3 {
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  
+  .footer-left h5 {
+    font-size: 21px;
+    margin-bottom: 20px;
+    margin-top: 00px;
+  }
+
+  .footer-left p {
+    font-size: 14px;
+    margin: 0px;
+  }
+  
+  .opening-hours {
+    font-size: 14px;
+    margin-top: 1px; /* Adjust the margin to reduce vertical spacing */
+  }
+  
+  .opening-hours span {
+    display: inline-block;
+    width: 60px;
+    margin-right: 30px; /* Adjust the margin to reduce vertical spacing */
+  }
+  
+  .footer-middle {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .phone-number {
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .phone-number i {
+    margin-right: 5px;
+  }
+  
+  .social-icons {
+    display: flex;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    color: darkcyan;
+
+    padding: 1px 10px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .icon:hover {
+    color: darkcyan;
+    cursor: pointer;
+    padding: 1px 10px;
+    transform: scale(1.3);
+
+  }
+
+  .social-icons i {
+    font-size: 50px;
+    margin-right: 15px;
+  }
+  
+  .footer-bottom {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .footer-right {
+    flex-basis: 30%;
+  }
+  
+  .footer-right p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  /* Additional styles for social icons (assuming Font Awesome icons) */
+  .fa-bing:before {
+    content: '\f285';
+  }
+  
+  .fa-facebook:before {
+    content: '\f09a';
+  }
+  
+  .fa-google-business:before {
+    content: '\f1a0';
+  }
+  
+  .fa-snapchat:before {
+    content: '\f2ac';
+  }
+  
+  .fa-linkedin:before {
+    content: '\f08c';
+  }
+  
+  .fa-pinterest:before {
+    content: '\f0d2';
+  }
+  
+  .fa-yelp:before {
+    content: '\f1e9';
+  }
+  
+  .links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .link-item {
+    margin: 0 10px;
+    font-size: 14px;
+    align-content: center;
+    text-decoration: none;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .link-item:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  .link-item:hover {
+    color: green;
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add spacing between icons */
+    margin-bottom: 10px;
+  }
+  
+  .social-icons i {
+    font-size: 54px; /* Increase the font size for larger icons */
+    margin-right: 10px; /* Add some margin between icons */
+  }
+
+  @media screen and (max-width: 768px) {
+    footer{
+      display: flex;
+      flex-direction: column;
+    }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-outter-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .footer-left,
+    .footer-middle{
+      width: 100%;
+      text-align: center; /* Add this line to center the content */
+    }
+    
+    .footer-right{
+      display: none;
+    }
+
+    .footer-left h3 {
+      font-size: 24px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .footer-left h5 {
+      font-size: 21px;
+      margin-bottom: 20px;
+      margin-top: 00px;
+    }
+
+    .footer-left p {
+      font-size: 14px;
+      margin: 0px;
+    }
+
+    .opening-hours {
+      font-size: 14px;
+      margin-top: 1px; /* Adjust the margin to reduce vertical spacing */
+    }
+
+    .opening-hours span {
+      display: inline-block;
+      width: 60px;
+      margin-right: 30px; /* Adjust the margin to reduce vertical spacing */
+    }
+
+    .phone-number {
+      display: flex;
+      font-size: 25px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .phone-number i {
+      margin-right: 5px;
+    }
+
+    .social-icons {
+      display: flex;
+      font-size: 50px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      color: darkcyan;
+
+      padding: 1px 10px;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .icon:hover {
+      color: darkcyan;
+      cursor: pointer;
+      padding: 1px 10px;
+      transform: scale(1.3);
+
+    }
+
+    .social-icons i {
+      font-size: 50px;
+      margin-right: 15px;
+    }
+
+    .footer-bottom {
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+    }
+
+    .footer-right p {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    /* Additional styles for social icons (assuming Font Awesome icons) */
+    .fa-bing:before {
+      content: '\f285';
+    }
+
+    .fa-facebook:before {
+      content: '\f09a';
+    }
+
+    .fa-google-business:before {
+      content: '\f1a0';
+    }
+
+    .fa-snapchat:before {
+      content: '\f2ac';
+    }
+
+    .fa-linkedin:before {
+      content: '\f08c';
+    }
+
+    .fa-pinterest:before {
+      content: '\f0d2';
+    }
+
+    .fa-yelp:before {
+      content: '\f1e9';
+    }
+
+    .links-container {
+      display: flex;
+      flex-wrap: wrap; /* Add this line to enable wrapping */
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+    }
+
+    .link-item {
+      margin: 0 10px;
+      font-size: 14px;
+      align-content: center;
+      text-decoration: none;
+      color: #555;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .link-item:not(:last-child)::after {
+      content: "|";
+      margin-left: 10px;
+      margin-right: 10px;
+      color: #555;
+    }
+
+    .link-item:hover {
+      color: green;
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Add spacing between icons */
+      margin-bottom: 10px;
+    }
+
+    .social-icons i {
+      font-size: 54px; /* Increase the font size for larger icons */
+      margin-right: 10px; /* Add some margin between icons */
+    }
+
+
+  }
