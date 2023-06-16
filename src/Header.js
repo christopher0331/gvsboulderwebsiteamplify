@@ -31,8 +31,6 @@ const Header = (props) => {
     setHeaderText({ h1: h1Text.toUpperCase(), subtext: '' });
   };
   
-  
-  
 
   return (
     <div>
@@ -41,7 +39,7 @@ const Header = (props) => {
         <Menu changePage={props.changePage} changeHeaderImage={changeHeaderImage} />
       </div>
 
-      <div className="hero-image" style={{ backgroundImage: `url(${headerImage})` }}>
+      <div className="hero-image" style={{     backgroundImage: `url(${headerImage})`, background: `rgba(0, 0, 0, 0.5)`, backgroundBlendMode: "darken" }}>
         <h2>{headerText.h1}</h2>
       </div>
     </div>

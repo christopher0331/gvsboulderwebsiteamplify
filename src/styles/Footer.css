@@ -1,16 +1,17 @@
 /* Footer.css */
-footer {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     background-color: #184b1d;
     color: white;
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
-.footer-left {
-    flex-basis: 30%;
-  }
+
+  .footer-left {
+      flex-basis: 30%;
+    }
   
   .footer-left h3 {
     font-size: 24px;
@@ -87,10 +88,19 @@ footer {
   }
   
   .footer-bottom {
-    font-size: 12px;
+    font-size: .9em;
     text-align: center;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    color: white;
+  }
+
+  .footer-bottom a{
+    color: white;
+  }
+
+  .footer-bottom a:visited{
+    color: rgb(186, 104, 186);
   }
   
   .footer-right {
@@ -175,14 +185,11 @@ footer {
   @media screen and (max-width: 768px) {
     footer{
       display: flex;
+      width: 100%;
+      padding: 1em;
       flex-direction: column;
     }
-    .footer {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-    }
+
 
     .footer-outter-container{
       display: flex;

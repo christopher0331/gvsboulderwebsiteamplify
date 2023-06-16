@@ -45,6 +45,7 @@
 
 .hero-image h2,
 .hero-image p {
+  font-size: 6em;
   position: relative; /* This ensures the text is on top of the overlay */
   z-index: 400; /* Make the z-index higher than the parent element */
   color: white; /* This makes the text white */
@@ -263,7 +264,7 @@
 }
 
 
-@media screen and (max-width: 748px) {
+  @media screen and (max-width: 748px) {
 
   .header {
     background-color: #194b1e;
@@ -288,8 +289,6 @@
   }
 
   
-
-
 
   .socialIcons {
     display: none;

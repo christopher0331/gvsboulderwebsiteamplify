@@ -12,6 +12,8 @@ import AutomaticGateInstallation from './AutomaticGateInstallation.js';
 import PrivacyFences from './PrivacyFences.js';
 import Testimonials from './Testimonials.js';
 import Gallery from './Gallery.js';
+import Accessibility from './AccessabilityStatement.js';
+import Sitemap from './Sitemap.xml';
 
 function App() {
   return (
@@ -28,7 +30,8 @@ function App() {
         <Route path="/services/privacy-fences" component={PrivacyFences} />
         <Route path="/testimonials" component={Testimonials} />
         <Route path="/gallery" component={Gallery} />
-
+        <Route path="/accessibility" component={Accessibility} />
+        <Route path="/sitemap" component={Sitemap} />
       </Switch>
       <Footer />
     </Router>
