@@ -63,7 +63,7 @@ const ContactUs = (props) => {
                     <div className="contactInfo">
                         <ContactInformation />
                     </div>
-                </div>F
+                </div>
                 <div className="contactFormAndInfoBreakpoint"> 
                     <div className="contactInfoBP">
                         <ContactInformation />

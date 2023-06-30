@@ -5,13 +5,13 @@ import { faFacebookF, faInstagram, faLinkedin } from "@fortawesome/free-brands-s
 import './styles/Header.css';
 import { Link } from "react-router-dom";
 
-const Menu = (props) => {
+const Menu = ({changeHeaderImage}) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClick = (imageUrl, h1Text) => {
-    props.changeHeaderImage(imageUrl, h1Text);
-  };
+    changeHeaderImage(imageUrl, h1Text);
+};
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
