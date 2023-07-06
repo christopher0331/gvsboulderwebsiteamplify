@@ -45,7 +45,7 @@
 
 .hero-image h2,
 .hero-image p {
-  font-size: 6em;
+  font-size: 4em;
   position: relative; /* This ensures the text is on top of the overlay */
   z-index: 400; /* Make the z-index higher than the parent element */
   color: white; /* This makes the text white */
@@ -103,29 +103,27 @@
 .menu-links {
   display: flex;
   justify-content: flex-end;
+  flex-direction: row;  
   align-items: center;
   margin-top: 0px;
   padding-bottom: 10px;
-  width: 95%;
+  width: 100%;
   z-index: 20;
   list-style-type: none;
-}
-
-.menu-links {
-  flex-direction: row;  
 }
 
 .menu-links li {
   position: relative;
   padding: 10px 0px;
   color: white;
+  width: 8.4em;
   z-index: 2; /* Increase the z-index value */
 }
 
 .menu-links li a {
   color: white;
-  font-size: 34px;
-  padding: 20px;
+  font-size: 1.5em;
+  flex-wrap: nowrap;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
@@ -243,7 +241,7 @@
 .MenuItem {
   display: flex;
   justify-content: right;
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: Cochin;
 }
 
@@ -251,7 +249,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 50%;
 }
 
 .navLink:visited {
@@ -264,7 +262,18 @@
 }
 
 
-  @media screen and (max-width: 748px) {
+@media screen and (max-width: 950px) {
+  
+  .hero-image h2,
+  .hero-image p {
+    font-size: 3em;
+    position: relative; /* This ensures the text is on top of the overlay */
+    z-index: 400; /* Make the z-index higher than the parent element */
+    color: white; /* This makes the text white */
+    text-align: center;
+    align-content: center;
+    padding: 0px;
+  }
 
   .header {
     background-color: #194b1e;
@@ -277,18 +286,16 @@
     position: relative;
     z-index: 10;
   }
-  
+
   .headerLogo {
     margin-bottom: 20px; /* Add a margin to create space between the elements */
   }
-  
+
   #Menu {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the content horizontally */
   }
-
-  
 
   .socialIcons {
     display: none;
@@ -325,6 +332,7 @@
   .menu-links li {
     display: block;
     padding: 10px 0px;
+    width: 150px;
     color: white;
     z-index: 2; /* Increase the z-index value */
   }
@@ -357,4 +365,109 @@
   .menu-links li:hover .submenu {
     display: block;
   }
+}
+
+
+
+  @media screen and (max-width: 748px) {
+    .hero-image h2,
+    .hero-image p {
+      font-size: 1em;
+      position: relative; /* This ensures the text is on top of the overlay */
+      z-index: 400; /* Make the z-index higher than the parent element */
+      color: white; /* This makes the text white */
+      text-align: center;
+      align-content: center;
+      padding: 0px;
+    }
+
+    .header {
+      background-color: #194b1e;
+      height: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* Add this line to center align items horizontally */
+      position: relative;
+      z-index: 10;
+    }
+    
+    .headerLogo {
+      margin-bottom: 20px; /* Add a margin to create space between the elements */
+    }
+    
+    #Menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the content horizontally */
+    }
+
+    .socialIcons {
+      display: none;
+    }
+
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 220px; /* Adjust the top value to position it below the logo */
+      right: 10px;
+      z-index: 50; /* Increase the z-index value */
+    }
+
+    .MenuInfo {
+      display: none;
+    }
+
+    .menu-links {
+      position: absolute;
+      display: none;
+      top: 100%;
+      right: 0; /* Updated to 'right' instead of 'left' */
+      background-color: #194b1e;
+      width: 100%;
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 30; /* Increase the z-index value */
+    }
+
+    .menu-links.open {
+      display: block;
+    }
+
+    .menu-links li {
+      display: block;
+      padding: 10px 0px;
+      color: white;
+      z-index: 2; /* Increase the z-index value */
+    }
+
+    .menu-links li a {
+      color: white;
+      font-size: 20px;
+      padding: 10px 20px;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .menu-links li a:hover {
+      transform: scale(1.1);
+      color: lightgreen;
+    }
+
+    .submenu {
+      display: none;
+      position: relative;
+      top: 0;
+      left: 0;
+      background-color: #194b1e;
+      width: 100%;
+      border-radius: 5px;
+      padding: 10px;
+      z-index: 30; /* Increase the z-index value */
+    }
+
+    .menu-links li:hover .submenu {
+      display: block;
+    }
 }
