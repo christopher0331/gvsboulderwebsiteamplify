@@ -13,10 +13,15 @@ const Header = ({headerImage, headerText, setHeaderImage, setHeaderText}) => {
         headerText: { h1: 'GreenView Solutions', subtext: 'From Privacy Structures to Quality Fences, We\'ve Got You Covered' }
       },
       {
-        page: '/services/',
-        imageUrl: 'https://ik.imagekit.io/greenviewsolutions/Portfolio/Project4/FullSize/IMG_1874.JPG?tr=',
-        headerText: { h1: 'Services', subtext: 'Explore Our Range of Services and Offerings' }
+        page: '/home',
+        imageUrl: 'https://ik.imagekit.io/greenviewsolutions/featuredprojects/Project1/picture13?tr=',
+        headerText: { h1: 'GreenView Solutions', subtext: 'From Privacy Structures to Quality Fences, We\'ve Got You Covered' }
       },
+      // {
+      //   page: '/services/',
+      //   imageUrl: 'https://ik.imagekit.io/greenviewsolutions/Portfolio/Project4/FullSize/IMG_1874.JPG?tr=',
+      //   headerText: { h1: 'Services', subtext: 'Explore Our Range of Services and Offerings' }
+      // },
       {
         page: '/contact-us',
         imageUrl: 'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/AboutUs/AboutUsImage.jpg',
@@ -58,7 +63,7 @@ const Header = ({headerImage, headerText, setHeaderImage, setHeaderText}) => {
         headerText: { h1: 'Security Fences', subtext: 'Protect Your Property with High-Quality Security Fencing' }
       },
       {
-        page: '/automatic-gate-installations',
+        page: '/services/automatic-gate-installations',
         imageUrl: 'https://ik.imagekit.io/greenviewsolutions/Portfolio/Project1/FullSize/project1Picture1.webp?tr=',
         headerText: { h1: 'Automatic Gate Installation', subtext: 'Enhance Security and Convenience with Automatic Gate Installations' }
       },
@@ -66,6 +71,8 @@ const Header = ({headerImage, headerText, setHeaderImage, setHeaderText}) => {
     ];
 
 
+    const defaultImageUrl = "https://ik.imagekit.io/greenviewsolutions/featuredprojects/Project1/picture13?tr=";
+    const defaultHeaderText = "From Privacy Structures to Quality Fences, We\'ve Got You Covered";
 
     const location = useLocation();
     const currentPage = location.pathname;
@@ -77,15 +84,17 @@ const Header = ({headerImage, headerText, setHeaderImage, setHeaderText}) => {
       setHeaderText({ h1: h1Text.toUpperCase(), subtext: '' });
     };
 
+
     function getHeaderImage(page) {
       const foundImage = imageUrls.find(item => item.page === page);
-      return foundImage ? foundImage.imageUrl : '';
+      return foundImage ? foundImage.imageUrl : defaultImageUrl;
     }
-
+    
     function getHeaderText(page) {
       const foundText = imageUrls.find(item => item.page === page);
-      return foundText ? foundText.headerText : { h1: '', subtext: '' };
+      return foundText ? foundText.headerText : defaultHeaderText;
     }
+    
 
     useEffect(() => {
       setHeaderImage(getHeaderImage(currentPage));

@@ -10,7 +10,7 @@ class ContactForm extends React.Component {
             name: '',
             phone: '',
             email: '',
-            address: '',
+            city: '',
             message: '',
 
         };
@@ -18,7 +18,7 @@ class ContactForm extends React.Component {
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handlePhoneChange = this.handlePhoneChange.bind(this);
         this.handleEmailChange = this.handleEmailChange.bind(this);
-        this.handleAddressChange = this.handleAddressChange.bind(this);
+        this.handleCityChange = this.handleCityChange.bind(this);
         this.handleMessageChange = this.handleMessageChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.sendMessage = this.sendMessage.bind(this);
@@ -37,8 +37,8 @@ class ContactForm extends React.Component {
         this.setState({email: event.target.value});
       }
 
-      handleAddressChange(event) {
-        this.setState({address: event.target.value});
+      handleCityChange(event) {
+        this.setState({city: event.target.value});
       }
 
       handleMessageChange(event) {
@@ -46,7 +46,7 @@ class ContactForm extends React.Component {
       }
 
       handleSubmit(event) {
-        alert('A form was submitted: ' + this.state.name + ',' + this.state.phone + ',' + this.state.email + ',' + this.state.address + ',' + this.state.message);
+        alert('A form was submitted: ' + this.state.name + ',' + this.state.phone + ',' + this.state.email + ',' + this.state.city + ',' + this.state.message);
         event.preventDefault();
       }
 
@@ -60,7 +60,7 @@ class ContactForm extends React.Component {
         const templateParams = {
             name: this.state.name + " (" + this.state.email + ")",
             to_name: "brandon@greenviewsolutions.net",
-            address: this.state.address,
+            city: this.state.city,
             message: this.state.message,
             phone: this.state.phone
             };
@@ -98,7 +98,7 @@ class ContactForm extends React.Component {
                                 <input className='inputField' placeholder="Email" type="email" value={this.state.value} onChange={this.handleEmailChange} />
                             </label>
                             <label className='inputBox'>
-                                <input className='inputField' placeholder="Location" type="text" value={this.state.value} onChange={this.handleAddressChange} />
+                                <input className='inputField' placeholder="Location" type="text" value={this.state.value} onChange={this.handleCityChange} />
                             </label>
                         </div>
                     </div>
