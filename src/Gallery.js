@@ -4,18 +4,10 @@ import { Button, Modal } from 'react-bootstrap';
 import FeaturedProject from './FeaturedProject.js';
 import './styles/Gallery.css';
 import CustomModal from './CustomModal.js';
-const credentials = require('./aws-credentials.json');
+import axios from 'axios';
+
 
 AWS.config.credentials = new AWS.Credentials();
-
-AWS.config.update({
-  region: 'us-west-2',
-  accessKeyId: credentials.accessKeyId,
-  secretAccessKey: credentials.secretAccessKey,
-
-});
-console.log("==================> ", credentials.secretAccessKey)
-
 const S3Bucket = () => {
   const [projectImages, setProjectImages] = useState([]);
   const [show, setShow] = useState(false);
@@ -32,40 +24,48 @@ const S3Bucket = () => {
   };
 
   useEffect(() => {
-  
-    AWS.config.update({
-      accessKeyId: credentials.accessKeyId,
-      secretAccessKey: credentials.secretAccessKey,
-    });
-  
-    const s3 = new AWS.S3();
-  
-    const getImagesFromProject = async () => {
-      const projects = [];
-      for (let i = 1; i <= 15; i++) {
-        const projectFolder = `Portfolio/Project${i}/FullSize/`;
-        const params = {
-          Bucket: 'greenviewsolutionsimages',
-          Prefix: projectFolder,
-        };
-  
-        try {
-          const data = await s3.listObjectsV2(params).promise();
-          const images = data.Contents
-            .filter(item => item.Key.endsWith('.webp') || item.Key.endsWith('.jpeg') || item.Key.endsWith('.JPG'))
-            .map(item => ({
-              id: i,
-              url: `https://ik.imagekit.io/greenviewsolutions/${item.Key}?tr=w-700,h-700`,
-            }));
-          projects.push(images);
-        } catch (err) {
-          console.log(err);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://379pj43m47.execute-api.us-west-2.amazonaws.com/default/gvsGetCreds")
+        console.log('============> ', response);
+        AWS.config.update({
+          region: 'us-west-2',
+          accessKeyId: response.data.accessKeyId,
+          secretAccessKey: response.data.secretAccessKey,
+        });
+
+        const s3 = new AWS.S3();
+
+        const projects = [];
+        for (let i = 1; i <= 15; i++) {
+          const projectFolder = `Portfolio/Project${i}/FullSize/`;
+          const params = {
+            Bucket: 'greenviewsolutionsimages',
+            Prefix: projectFolder,
+          };
+
+          try {
+            const data = await s3.listObjectsV2(params).promise();
+            const images = data.Contents
+              .filter(item => item.Key.endsWith('.webp') || item.Key.endsWith('.jpeg') || item.Key.endsWith('.JPG'))
+              .map(item => ({
+                id: i,
+                url: `https://ik.imagekit.io/greenviewsolutions/${item.Key}?tr=w-700,h-700`,
+              }));
+            projects.push(images);
+          } catch (err) {
+            console.log(err);
+          }
         }
+        setProjectImages(projects);
+      } catch (err) {
+        console.log('error', err);
       }
-      setProjectImages(projects);
-    };
-    getImagesFromProject();
+    }
+
+    fetchData();
   }, []);
+
 
 
 

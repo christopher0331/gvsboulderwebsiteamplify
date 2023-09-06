@@ -8,8 +8,9 @@
 .portfolioBlock {
     display: flex;
     flex-wrap: wrap;
-    margin-right: 50px;
+    margin-right: 10px;
     justify-content: space-between;
+
 }
 
 
