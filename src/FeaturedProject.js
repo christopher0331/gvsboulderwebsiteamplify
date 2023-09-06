@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import './styles/FeaturedProject.css';
+import './styles/FeaturedProjects.css';
 
 const FeaturedProject = ({ projectNumber, images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import AWS from 'aws-sdk';
-import CustomModal from './CustomModal.js';
+import { Button, Modal } from 'react-bootstrap';
+import FeaturedProject from './FeaturedProject.js';
 import './styles/Gallery.css';
+import CustomModal from './CustomModal.js';
+const credentials = require('./aws-credentials.json');
+
+AWS.config.credentials = new AWS.Credentials();
+
+AWS.config.update({
+  region: 'us-west-2',
+  accessKeyId: credentials.accessKeyId,
+  secretAccessKey: credentials.secretAccessKey,
+
+});
+console.log("==================> ", credentials.secretAccessKey)
 
 const S3Bucket = () => {
   const [projectImages, setProjectImages] = useState([]);
@@ -19,12 +32,10 @@ const S3Bucket = () => {
   };
 
   useEffect(() => {
-    const getImages = "AKIAZJ7XN6M6UNBRKVYV";
-    const getImagesMyst = "2v49fYw4jwYfMThMABqj0TCCfkX4XXOSGAp4fnVj";
   
     AWS.config.update({
-      accessKeyId: getImages,
-      secretAccessKey: getImagesMyst,
+      accessKeyId: credentials.accessKeyId,
+      secretAccessKey: credentials.secretAccessKey,
     });
   
     const s3 = new AWS.S3();
@@ -55,7 +66,9 @@ const S3Bucket = () => {
     };
     getImagesFromProject();
   }, []);
-  
+
+
+
   return (
     <div>
       <ul>
@@ -90,6 +103,6 @@ const S3Bucket = () => {
       </ul>
     </div>
   );
-};
+}
 
 export default S3Bucket;
