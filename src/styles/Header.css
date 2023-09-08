@@ -102,27 +102,29 @@
 #Menu,
 .menu-links {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   flex-direction: row;  
-  align-items: center;
-  margin-top: 0px;
-  padding-bottom: 10px;
+  /* align-items: right; */
+  margin: 0px 0px;
+  padding: 0px 0px;
   width: 100%;
   z-index: 20;
   list-style-type: none;
 }
 
+
 .menu-links li {
   position: relative;
-  padding: 10px 0px;
+  padding: 0px 20px;
   color: white;
-  width: 8.4em;
+  width: 12em;
+
   z-index: 2; /* Increase the z-index value */
 }
 
 .menu-links li a {
   color: white;
-  font-size: 1.5em;
+  font-size: 2.5em;
   flex-wrap: nowrap;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -137,7 +139,6 @@
   display: none;
   position: absolute;
   top: 100%;
-  left: 0;
   background-color: #194b1e;
   width: 20em;
   border-radius: 5px;
@@ -236,6 +237,7 @@
   color: white;
   margin-top: 10px;
   margin-right: 20px;
+  
 }
 
 .MenuItem {
@@ -243,13 +245,14 @@
   justify-content: right;
   font-size: 1.5em;
   font-family: Cochin;
+
 }
 
 .InfoAndMenu {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
 }
 
 .navLink:visited {
