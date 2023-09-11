@@ -64,7 +64,9 @@
 .socialIconBar {
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
+  margin-right: 3vw;
+  font-size: 1.7vw;
+
 }
 
 .socialIcons {
@@ -95,36 +97,91 @@
   text-decoration: none;
 }
 
+.visitMainWebsiteButton {
+  cursor: hand;
+  color: white;
+  border-radius: 15px;
+  font-size: 1.4vw;
+  background-color: #194b1e;
+  padding: 1.8vw;
+  transition: all 0.2s ease-in-out;
+}
+
+.visitMainWebsiteButton:hover {
+  color: white;
+  transform: scale(4.1);
+  cursor: hand;
+  border-radius: 15px;
+  font-size: 1.4vw;
+  background-color: #194b1e;
+  padding: 1.8vw;
+
+}
+
 
 /* =================== MENU =============================== */
 
+#Menu{
+  display: flex;
+  z-index: 20;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0px 10px;
 
-#Menu,
+}
+
+.MenuInfo {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding: 0px 10px;
+}
+
+.ContactInfo {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 3vw;
+  font-size: 1.5vw;
+}
+
+.MenuItem {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.InfoAndMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 2vw;
+}
+
+.nav-items{
+  font-size: 1.9vw;
+}
+
 .menu-links {
   display: flex;
   justify-content: space-around;
-  flex-direction: row;  
-  /* align-items: right; */
-  margin: 0px 0px;
-  padding: 0px 0px;
-  width: 100%;
   z-index: 20;
+  padding: 0px 3vw;
+
+  overflow: hidden;
   list-style-type: none;
 }
 
 
 .menu-links li {
   position: relative;
-  padding: 0px 20px;
-  color: white;
-  width: 12em;
+  padding: 0px 2vw;
 
+  color: white;
   z-index: 2; /* Increase the z-index value */
 }
 
 .menu-links li a {
   color: white;
-  font-size: 2.5em;
   flex-wrap: nowrap;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
@@ -228,31 +285,6 @@
 #button-color:hover {
   background-color: #194b1e;
   color: white;
-}
-
-.MenuInfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  color: white;
-  margin-top: 10px;
-  margin-right: 20px;
-  
-}
-
-.MenuItem {
-  display: flex;
-  justify-content: right;
-  font-size: 1.5em;
-  font-family: Cochin;
-
-}
-
-.InfoAndMenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .navLink:visited {

@@ -161,8 +161,8 @@
 
 
 .portfolioImage {
-    width: 250px; /* make image fill the entire width of the .portfolioProjects div */
-    height: 250px;
+    width: 150px; /* make image fill the entire width of the .portfolioProjects div */
+    height: 150px;
     border: solid black 2px;
     border-radius: 20px;
 }

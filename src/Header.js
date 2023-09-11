@@ -121,6 +121,10 @@ const Header = ({headerImage, headerText, setHeaderImage, setHeaderText}) => {
         >
           <h2>{headerText.h1}</h2>
           <p>{headerText.subtext}</p>
+          <a href="https://greenviewsolutions.net">
+            <button className="visitMainWebsiteButton">Visit Main Website</button>
+          </a>
+
         </div>
     </div>
     );
