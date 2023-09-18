@@ -48,85 +48,85 @@ const Menu = ({changeHeaderImage}) => {
       
       <div id="Menu">
       
-        <nav className="nav-items">
-          <div className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-            <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="lg" color="white" />
-          </div>
-          <ul className={`menu-links ${isMenuOpen ? 'open' : ''}`}>
-            <li>
-              <Link to="/" onClick={() => handleClick('imageForHomePage', 'GREENVIEW SOLUTIONS')}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/services" onClick={() => handleClick('imageForServicesPage', 'Services')}>
-                Services
-              </Link>
-              <ul className="submenu">
-                <li>
-                  <Link
-                    to="/services/privacy-fence-installation"
-                    onClick={() => handleClick('imageForPrivacyFenceInstallation', 'Privacy Fence Installation')}
-                  >
-                    Privacy Fence Installation
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/fence-contractor"
-                    onClick={() => handleClick('imageForFenceContractor', 'Fence Contractor')}
-                  >
-                    Fence Contractor
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/automatic-gate-installations"
-                    onClick={() => handleClick('imageForAutoGate', 'Automatic Gate Installations')}
-                  >
-                    Automatic Gate Installations
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/privacy-fences"
-                    onClick={() => handleClick('imageForPrivacyFence', 'Privacy Fences')}
-                  >
-                    Privacy Fences
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/security-fences"
-                    onClick={() => handleClick('imageForSecurityFence', 'Security Fences')}
-                  >
-                    Security Fences
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link to="/contact-us" onClick={() => handleClick('imageForContactUsPage', 'Contact Us')}>
-                Contact Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/about-us" onClick={() => handleClick('imageForAboutUsPage', 'About Us')}>
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/testimonials" onClick={() => handleClick('imageForTestimonyPage', 'Testimonials')}>
-                Testimonials
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" onClick={() => handleClick('imageForGalleryPage', 'Gallery')}>
-                Gallery
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      <nav className="nav-items">
+        <div className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} size="lg" color="white" />
+        </div>
+        <ul className={`menu-links ${isMenuOpen ? 'open' : ''}`}>
+          <li>
+            <Link to="/" onClick={() => handleClick('imageForHomePage', 'GREENVIEW SOLUTIONS')}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/services" onClick={() => handleClick('imageForServicesPage', 'Services')}>
+              Services
+            </Link>
+            <ul className="submenu">
+              <li>
+                <Link
+                  to="/services/privacy-fence-installation"
+                  onClick={() => handleClick('imageForPrivacyFenceInstallation', 'Privacy Fence Installation')}
+                >
+                  Privacy Fence Installation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/fence-contractor"
+                  onClick={() => handleClick('imageForFenceContractor', 'Fence Contractor')}
+                >
+                  Fence Contractor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/automatic-gate-installations"
+                  onClick={() => handleClick('imageForAutoGate', 'Automatic Gate Installations')}
+                >
+                  Automatic Gate Installations
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/privacy-fences"
+                  onClick={() => handleClick('imageForPrivacyFence', 'Privacy Fences')}
+                >
+                  Privacy Fences
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/security-fences"
+                  onClick={() => handleClick('imageForSecurityFence', 'Security Fences')}
+                >
+                  Security Fences
+                </Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link to="/contact-us" onClick={() => handleClick('imageForContactUsPage', 'Contact Us')}>
+              Contact Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/about-us" onClick={() => handleClick('imageForAboutUsPage', 'About Us')}>
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/testimonials" onClick={() => handleClick('imageForTestimonyPage', 'Testimonials')}>
+              Testimonials
+            </Link>
+          </li>
+          <li>
+            <Link to="/gallery" onClick={() => handleClick('imageForGalleryPage', 'Gallery')}>
+              Gallery
+            </Link>
+          </li>
+        </ul>
+      </nav>
       </div>
     </div>
   );

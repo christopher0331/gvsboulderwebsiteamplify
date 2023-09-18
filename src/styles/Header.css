@@ -400,12 +400,16 @@ a {
     width: 100%;
     border-radius: 5px;
     padding: 10px;
-    z-index: 30; /* Increase the z-index value */
+    z-index: 130; /* Increase the z-index value */
   }
 
-  .menu-links li:hover .submenu {
+  .submenu:hover {
+    display: block
+  }
+  .menu-links > li:hover > .submenu {
     display: block;
   }
+  
 }
 
 

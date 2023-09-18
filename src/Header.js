@@ -123,7 +123,7 @@ const Header = ({headerImage, headerText, setHeaderImage, setHeaderText}) => {
           <p>{headerText.subtext}</p>
 
           <a href="https://greenviewsolutions.net">
-            <button href="https://greenviewsolutions.net" className="visitMainWebsiteButton">Visit Main Website!</button>
+            <button className="visitMainWebsiteButton">Visit Main Website!</button>
           </a>
 
         </div>

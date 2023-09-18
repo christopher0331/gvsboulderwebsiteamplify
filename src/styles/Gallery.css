@@ -13,15 +13,16 @@
 
 }
 
-
 .portfolioImage {
-    width: 250px; /* make image fill the entire width of the .portfolioProjects div */
-    height: 350px;
+    width: 25em; /* make image fill the entire width of the .portfolioProjects div */
+    height: 25em;
     border: solid black 2px;
     border-radius: 20px;
 }
 
 .portfolioBody {
+    height: 8vw;
+    width: 18vw;
     display: none;
 
 }
@@ -31,9 +32,12 @@
     bottom: 0;
     left: 0;
     right: 0;
+    height: 8vw;
+    width: 18vw;
     background-color: rgba(58, 58, 58, 0.564);
     color: white;
-    padding: 12px 10px;
+    margin: 10px 10px;
+    padding: 8px 10px;
     text-align: center;
     border-radius: 9px;
     display: none;
@@ -44,12 +48,10 @@
     position: absolute;
     flex-direction: column;
     text-align: center;
-    height: 220px;
-    width: 320px;
-    margin-top: 10px;
-    margin-right: 0px;
-    margin-left: 15px;
-    padding: 12px 10px;
+    height: 8vw;
+    width: 18vw;
+    margin: 10px 10px;
+    padding: 8px 10px;
     background-color: rgba(58, 58, 58, 0.564);
     color: white;
     text-shadow: black 2px 2px 8px;
@@ -61,11 +63,10 @@
     position: absolute;
     flex-direction: column;
     text-align: center;
-    height: 220px;
-    width: 320px;
-    margin-top: 10px;
-    margin-left: 15px;
-    padding: 12px 10px;
+    height: 8vw;
+    width: 18vw;
+    margin: 10px 10px;
+    padding: 8px 10px;
     background-color: rgba(58, 58, 58, 0.564);
     color: white;
     text-shadow: black 2px 2px 8px;
@@ -76,7 +77,7 @@
 .btn2 {		
 	position: absolute;	
 	padding: 15px 8px;
-	padding-right: 4px;
+	padding-right: 0px;
 	font-size: 1.4rem;
 	border-radius: 18px;
 	color: white;
@@ -85,7 +86,7 @@
 	transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);	
 	cursor: pointer;
 	user-select: none;
-    width: 13em;
+    width: 17vw;
     border: 1px solid white;
     border-right: 0px;
     margin: 12px 2px;
@@ -161,8 +162,8 @@
 
 
 .portfolioImage {
-    width: 150px; /* make image fill the entire width of the .portfolioProjects div */
-    height: 150px;
+    width: 250px; /* make image fill the entire width of the .portfolioProjects div */
+    height: 250px;
     border: solid black 2px;
     border-radius: 20px;
 }
@@ -290,7 +291,7 @@
 
 
 .portfolioProjects {
-    width: 25%;
+    width: 125%;
     margin-bottom: 20px;
     position: relative;
   }
