@@ -116,14 +116,14 @@ const Header = ({headerImage, headerText, setHeaderImage, setHeaderText}) => {
             backgroundBlendMode: 'darken', 
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover'
+            backgroundSize: 'cover',
           }}
         >
           <h2>{headerText.h1}</h2>
           <p>{headerText.subtext}</p>
 
           <a href="https://greenviewsolutions.net">
-            <button href="https://greenviewsolutions.net" className="visitMainWebsiteButton">Visit Main Website!</button>
+            <button className="visitMainWebsiteButton">Visit Main Website!</button>
           </a>
 
         </div>

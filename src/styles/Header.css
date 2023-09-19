@@ -2,8 +2,21 @@
 a {
   z-index: 400;
 }
+.hero-image h2 {
+  font-size: 4vw; /* Adjust as needed */
+  margin: 0;
+  padding: 20px 0;
+  color: white; /* Or any desired color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-
+.hero-image p {
+  font-size: 2vw; /* Adjust as needed */
+  margin: 0;
+  padding: 10px 0;
+  color: white; /* Or any desired color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 .header {
   background-color: #194b1e;
   height: 300px;
@@ -48,34 +61,17 @@ a {
   background: rgba(0, 0, 0, 0.1); /* This is the dark overlay */
 }
 
-.hero-image h2,
-.hero-image p {
-  font-size: 4em;
-  position: relative; /* This ensures the text is on top of the overlay */
-  z-index: 400; /* Make the z-index higher than the parent element */
-  color: white; /* This makes the text white */
-  text-align: center;
-  align-content: center;
-  padding: 20px;
-}
-
-.me-auto {
-  display: flex;
-  flex-direction: row;
-  margin-top: -3em;
-}
-
-
 .socialIconBar {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 3vw;
+  justify-content: flex-start;
   font-size: 1.7vw;
-
 }
 
 .socialIcons {
+  display: flex;
   margin: 15px;
+  padding: 1.4vw;
+
   transition: all 0.2s ease-in-out;
 }
 
@@ -84,20 +80,11 @@ a {
   color: lightblue;
 }
 
-#email {
+#email, #phone {
   color: white;
 }
 
-#email:hover {
-  color: lightblue;
-  text-decoration: none;
-}
-
-#phone {
-  color: white;
-}
-
-#phone:hover {
+#email:hover, #phone:hover {
   color: lightblue;
   text-decoration: none;
 }
@@ -118,397 +105,211 @@ a {
   background-color: #2a6f31;
   padding: 1.8vw;
   border: 2px solid white;
-
 }
 
+/* =========================================== Delete duplicated above this====================== */
 
-/* =================== MENU =============================== */
-
-#Menu{
-  display: flex;
-  z-index: 20;
-  justify-content: space-around;
-  list-style-type: none;
-  padding: 0px 10px;
-
-}
-
-.MenuInfo {
-  display: flex;
-  flex-direction: row;
-  color: white;
-  padding: 0px 10px;
-}
-
-.ContactInfo {
-  display: flex;
-  justify-content: flex-end;
-  padding: 0px 3vw;
-  font-size: 1.5vw;
-}
-
-.MenuItem {
-  display: flex;
-  justify-content: space-around;
-
-}
-
+/* General Styles */
 .InfoAndMenu {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-size: 2vw;
+  align-items: end;
+  font-size: 1.4em;
+  margin: .5vw 1.5vw;
 }
 
-.nav-items{
-  font-size: 1.9vw;
+.ContactInfo {
+  display: flex;
+  flex-direction: end;
+  align-items: right;
+  padding: 1.4vw;
+
+  font-size: 1.1em;
+  gap: 20px;
 }
 
-.menu-links {
+.MenuItem {
+  margin: 0;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+
+.ContactInfo .MenuItem:hover {
+  color: #ccc;
+}
+
+/* Menu styles */
+#Menu {
   display: flex;
   justify-content: space-around;
-  z-index: 20;
-  padding: 0px 3vw;
-
-  overflow: hidden;
-  list-style-type: none;
-}
-
-
-.menu-links li {
   position: relative;
-  padding: 0px 2vw;
-
-  color: white;
-  z-index: 2; /* Increase the z-index value */
 }
 
-.menu-links li a {
-  color: white;
-  flex-wrap: nowrap;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-
-.menu-links li a:hover {
-  transform: scale(1.1);
-  color: lightgreen;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: #194b1e;
-  width: 20em;
-  border-radius: 5px;
-  padding: 10px;
-  z-index: 30; /* Increase the z-index value */
-}
-
-.menu-links li:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  display: block;
-  margin: 5px 0;
-}
-
-.submenu li a {
-  font-size: 20px;
-}
-
-.submenu li a:hover {
-  color: lightgreen;
-}
-
-
-.menu-links.open {
+.nav-items {
   display: flex;
+  justify-content: space-between;
+  font-size: 1.4em;
+  align-items: center;
 }
 
 .menu-toggle {
   display: none;
-  font-size: 24px;
-  color: white;
   cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  font-size: 24px;
 }
 
-.menu-toggle.open {
+.menu-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.services-item {
+  margin: 0;
+  color: white;
+  transition: color 0.3s ease;
+}
+.menu-links li {
+  position: relative;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: white;
+  width: 15vw;
+  padding: 1.4vw;
+  transition: color 0.3s ease;
+}
+
+.menu-links a:hover {
+  color: #ccc;
+}
+
+/* Submenu/Dropdown styles */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  background-color: #194b1e;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.submenu li {
+  padding: 8px 16px;
+}
+
+.submenu li:hover {
+  background-color: #194b1e;
+}
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.submenu.open {
   display: block;
 }
+/* ... [Previous CSS] ... */
 
-.menu-toggle:hover {
-  color: lightgreen;
-}
-
-#navbar-color {
-  background-color: #194b1e;
-}
-
-#basic-nav-dropdown {
-  color: white;
-  font-size: 24px;
-  margin-top: -2px;
-  transform: scale(1.1);
-  color: lightgreen;
-}
-
-#basic-nav-dropdown:hover {
-  transform: scale(1.1);
-  color: lightgreen;
-}
-
-#nav-link {
-  color: white;
-  transition: all 0.2s ease-in
-}
-
-#nav-link:hover {
-  transform: scale(1.1);
-  color: lightgreen;
-}
-
-.ddItem {
-  font-size: 24px;
-}
-
-.ddItem:active {
-  font-size: 24px;
-  background-color: #194b1e;
-  color: white;
-}
-
-#button-color {
-  background-color: white;
-}
-
-#button-color:hover {
-  background-color: #194b1e;
-  color: white;
-}
-
-.navLink:visited {
-  color: black;
-}
-
-#navbar-color {
-  z-index: 10;
-  border-radius: 20px;
-}
-
-
-@media screen and (max-width: 950px) {
+/* Responsive menu */
+@media (max-width: 800px) {
   
-  .hero-image h2,
-  .hero-image p {
-    font-size: 3em;
-    position: relative; /* This ensures the text is on top of the overlay */
-    z-index: 400; /* Make the z-index higher than the parent element */
-    color: white; /* This makes the text white */
-    text-align: center;
-    align-content: center;
-    padding: 0px;
-  }
-
-  .header {
-    background-color: #194b1e;
-    height: 300px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Add this line to center align items horizontally */
-    position: relative;
-    z-index: 10;
-  }
-
-  .headerLogo {
-    margin-bottom: 20px; /* Add a margin to create space between the elements */
-  }
-
-  #Menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the content horizontally */
-  }
-
-  .socialIcons {
-    display: none;
-  }
-  
-  .ContactInfo{
-    display: none;
-  }
   .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 220px; /* Adjust the top value to position it below the logo */
-    right: 10px;
-    z-index: 50; /* Increase the z-index value */
+      display: block;
   }
-
-  .MenuInfo {
+  
+  /* Hide desktop menu items and social icons bar by default on mobile */
+  .menu-links{
     display: none;
   }
 
+  .socialIconBar{
+    display: none;
+  }
+
+  /* Position and style of the mobile menu */
   .menu-links {
-    position: absolute;
-    display: none;
-    top: 100%;
-    right: 0; /* Updated to 'right' instead of 'left' */
-    background-color: #194b1e;
-    width: 100%;
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 30; /* Increase the z-index value */
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #194b1e;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;  /* Hide by default */
+      width: 200px;  
   }
 
   .menu-links.open {
-    display: block;
+      display: flex;  /* Show when open class is added */
   }
 
-  .menu-links li {
-    display: block;
-    padding: 10px 0px;
-    width: 150px;
-    color: white;
-    z-index: 2; /* Increase the z-index value */
+  .menu-links a {
+      padding: 8px 16px;
+      border-radius: 4px;
+      width: auto;  
   }
 
-  .menu-links li a {
-    color: white;
-    font-size: 20px;
-    padding: 10px 20px;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  }
-
-  .menu-links li a:hover {
-    transform: scale(1.1);
-    color: lightgreen;
+  .menu-links a:hover {
+      background-color: #194b1e;
   }
 
   .submenu {
-    display: none;
     position: relative;
     top: 0;
     left: 0;
-    background-color: #194b1e;
-    width: 100%;
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 30; /* Increase the z-index value */
-  }
-
-  .menu-links li:hover .submenu {
-    display: block;
+    border-top: 1px solid #194b1e;
+}
+  /* If you want to hide the contact info on mobile as well */
+  .ContactInfo {
+      display: none;
   }
 }
 
 
+@media (max-width: 1200px) {
+  .InfoAndMenu {
+    width: 1.5vw;
+    font-size: 1.1em; /* reduced from 1.4em */
+  }
 
-  @media screen and (max-width: 748px) {
-    .hero-image h2,
-    .hero-image p {
-      font-size: 1em;
-      position: relative; /* This ensures the text is on top of the overlay */
-      z-index: 400; /* Make the z-index higher than the parent element */
-      color: white; /* This makes the text white */
-      text-align: center;
-      align-content: center;
-      padding: 0px;
-    }
+  .ContactInfo {
+    font-size: 1em; /* reduced from 1.1em */
+  }
 
-    .header {
-      background-color: #194b1e;
-      height: 300px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; /* Add this line to center align items horizontally */
-      position: relative;
-      z-index: 10;
-    }
-    
-    .headerLogo {
-      margin-bottom: 20px; /* Add a margin to create space between the elements */
-    }
-    
-    #Menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center the content horizontally */
-    }
+  .nav-items {
+    font-size: 2.1vw; /* reduced from 1.4em */
 
-    .socialIcons {
-      display: none;
-    }
+  }
 
-    .menu-toggle {
-      display: block;
-      position: absolute;
-      top: 220px; /* Adjust the top value to position it below the logo */
-      right: 10px;
-      z-index: 50; /* Increase the z-index value */
-    }
+  .socialIconBar {
+    font-size: 1.5vw; /* slightly reduced */
+  }
 
-    .MenuInfo {
-      display: none;
-    }
+  .visitMainWebsiteButton {
+    font-size: 1.2vw; /* reduced from 1.4vw */
+    padding: 1.6vw;  /* reduced from 1.8vw */
+  }
 
-    .menu-links {
-      position: absolute;
-      display: none;
-      top: 100%;
-      right: 0; /* Updated to 'right' instead of 'left' */
-      background-color: #194b1e;
-      width: 100%;
-      border-radius: 5px;
-      padding: 10px;
-      z-index: 30; /* Increase the z-index value */
-    }
+  .menu-links a {
+    width: 3.4vw;
+    padding: .8vw;  /* reduced from 1.4vw */
+  }
 
-    .menu-links.open {
-      display: block;
-    }
+  .menu-links li {
+    padding: .4vw;  /* slightly reduced */
+    width: 11.8vw;
 
-    .menu-links li {
-      display: block;
-      padding: 10px 0px;
-      color: white;
-      z-index: 2; /* Increase the z-index value */
-    }
-
-    .menu-links li a {
-      color: white;
-      font-size: 20px;
-      padding: 10px 20px;
-      text-decoration: none;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .menu-links li a:hover {
-      transform: scale(1.1);
-      color: lightgreen;
-    }
-
-    .submenu {
-      display: none;
-      position: relative;
-      top: 0;
-      left: 0;
-      background-color: #194b1e;
-      width: 100%;
-      border-radius: 5px;
-      padding: 10px;
-      z-index: 30; /* Increase the z-index value */
-    }
-
-    .menu-links li:hover .submenu {
-      display: block;
-    }
+  }
 }
