@@ -2,7 +2,21 @@
 a {
   z-index: 400;
 }
+.hero-image h2 {
+  font-size: 4vw; /* Adjust as needed */
+  margin: 0;
+  padding: 20px 0;
+  color: white; /* Or any desired color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
+.hero-image p {
+  font-size: 2vw; /* Adjust as needed */
+  margin: 0;
+  padding: 10px 0;
+  color: white; /* Or any desired color */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 .header {
   background-color: #194b1e;
   height: 300px;
