@@ -53,14 +53,16 @@ const BoxesSection = () => {
               : item.title === 'SECURITY FENCES' ? 
                 <OscillatingCarousel images={[
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image1.jpg?tr=w-700,h-700',
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image2.jpg?tr=w-700,h-700',
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image3.jpg?tr=w-700,h-700',
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image6.JPG?tr=w-700,h-700',
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image7.jpeg?tr=w-700,h-700',
+                  
                 ]} />
               : item.title === 'FENCE CONTRACTOR' ? 
                 <OscillatingCarousel images={[
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image5.JPG?tr=w-700,h-700',
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image6.JPG?tr=w-700,h-700',
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image7.jpeg?tr=w-700,h-700',
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image2.jpg?tr=w-700,h-700',
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image3.jpg?tr=w-700,h-700',
+                  
                 ]} />
               : <img src={item.url} alt="Box Image" />
               }
@@ -72,7 +74,20 @@ const BoxesSection = () => {
         <div className="bottom-row">
           {contentData.slice(3).map((item, index) => (
             <div className={`box ${item.className}`} key={index}>
-              <img src={item.url} alt="Box Image" />
+              {item.title === 'PRIVACY FENCES' ? 
+                <OscillatingCarousel images={[
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project11/FullSize/project11Picture3.webp?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project6/FullSize/IMG_7144.jpeg?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project15/FullSize/project2Picture5.webp?tr=w-700,h-700',
+                ]} />
+              : item.title === 'PRIVACY FENCE INSTALLATION' ? 
+                <OscillatingCarousel images={[
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/privacyFenceInstallation1.jpg?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project3/FullSize/IMG_1568.JPG?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project4/FullSize/IMG_1879.JPG?tr=w-700,h-700',
+                ]} />
+              : <img src={item.url} alt="Box Image" />
+              }
               <h2 className="services">{item.title}</h2>
               <p>{item.header}</p>
             </div>
@@ -84,3 +99,5 @@ const BoxesSection = () => {
 };
 
 export default BoxesSection;
+
+
