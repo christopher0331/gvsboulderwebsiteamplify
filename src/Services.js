@@ -82,7 +82,7 @@ const BoxesSection = () => {
                 ]} />
               : item.title === 'PRIVACY FENCE INSTALLATION' ? 
                 <OscillatingCarousel images={[
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/privacyFenceInstallation1.jpg?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project5/FullSize/IMG_5426.jpeg?tr=w-700,h-700',
                   'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project3/FullSize/IMG_1568.JPG?tr=w-700,h-700',
                   'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project4/FullSize/IMG_1879.JPG?tr=w-700,h-700',
                 ]} />
