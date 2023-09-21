@@ -61,7 +61,7 @@ const Footer = () => {
         <div className="footer-middle">
           <div className="phone-number">
             <FontAwesomeIcon className="icon" icon={faPhone} />
-            <span>303.358.8168</span>
+            <a href="tel:303-358-8168"><h4 className="MenuItem" id="phone">303.358.8168 |  </h4></a>
           </div>
           <div className="social-icons">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

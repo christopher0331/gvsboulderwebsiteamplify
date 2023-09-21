@@ -56,8 +56,10 @@
   }
   
   .phone-number i {
+    text-decoration: none; /* this removes the underline */
     margin-right: 5px;
-  }
+}
+
   
   .social-icons {
     display: flex;
