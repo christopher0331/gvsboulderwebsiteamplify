@@ -54,6 +54,7 @@ const BoxesSection = () => {
                 ]} />
               : item.title === 'SECURITY FENCES' ? 
                 <OscillatingCarousel images={[
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/sf1.png?tr=w-700,h-700',
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image5.JPG?tr=w-700,h-700',
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image6.JPG?tr=w-700,h-700',
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image7.jpeg?tr=w-700,h-700',
