@@ -46,20 +46,22 @@ const BoxesSection = () => {
             <div className={`box ${item.className}`} key={index}>
               {item.title === 'AUTOMATIC GATE INSTALLATIONS' ? 
                 <OscillatingCarousel images={[
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/Project1/FullSize/project1Picture4.webp?tr=w-700,h-700', 
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image4.jpeg?tr=w-700,h-700',
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/Project1/FullSize/project1Picture5.webp?tr=w-700,h-700'
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/ag1.png?tr=w-700,h-900',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/ag2.png?tr=w-700,h-900',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/ag3.png?tr=w-700,h-900',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/ag4.png?tr=w-700,h-900',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/ag5.jpeg?tr=w-700,h-700',
                 ]} />
               : item.title === 'SECURITY FENCES' ? 
                 <OscillatingCarousel images={[
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image1.jpg?tr=w-700,h-700',
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image5.JPG?tr=w-700,h-700',
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image6.JPG?tr=w-700,h-700',
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image7.jpeg?tr=w-700,h-700',
                   
                 ]} />
               : item.title === 'FENCE CONTRACTOR' ? 
                 <OscillatingCarousel images={[
-                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image5.JPG?tr=w-700,h-700',
+                  'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image1.jpg?tr=w-700,h-700',
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image2.jpg?tr=w-700,h-700',
                   'https://ik.imagekit.io/greenviewsolutions/Portfolio/gvsBoulderWebsite/image3.jpg?tr=w-700,h-700',
                   
