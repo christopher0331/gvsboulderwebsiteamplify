@@ -78,15 +78,15 @@ const BoxesSection = () => {
             <div className={`box ${item.className}`} key={index}>
               {item.title === 'PRIVACY FENCES' ? 
                 <OscillatingCarousel images={[
-                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project11/FullSize/project11Picture3.webp?tr=w-700,h-700',
-                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project6/FullSize/IMG_7144.jpeg?tr=w-700,h-700',
-                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project15/FullSize/project2Picture5.webp?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/pf1.png?tr=w-700,h-700?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/pf2.png?tr=w-700,h-700?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/pf3.png?tr=w-700,h-700?tr=w-700,h-700',
                 ]} />
               : item.title === 'PRIVACY FENCE INSTALLATION' ? 
                 <OscillatingCarousel images={[
-                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project5/FullSize/IMG_5426.jpeg?tr=w-700,h-700',
-                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project3/FullSize/IMG_1568.JPG?tr=w-700,h-700',
-                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/Project4/FullSize/IMG_1879.JPG?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/pf4.png?tr=w-700,h-700?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/pf5.png?tr=w-700,h-700?tr=w-700,h-700',
+                  'https://greenviewsolutionsimages.s3.us-west-1.amazonaws.com/Portfolio/gvsBoulderWebsite/pf6.png?tr=w-700,h-700?tr=w-700,h-700',
                 ]} />
               : <img src={item.url} alt="Box Image" />
               }
