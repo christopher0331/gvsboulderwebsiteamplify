@@ -1,20 +1,34 @@
 .scrolling-section {
   position: relative;
+  height: 700px;
   overflow: hidden;
-  color: white;
+  background-image: url("https://ik.imagekit.io/greenviewsolutions/featuredprojects/Project4/picture7?tr=w-900,h-900");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* Shifts the image up by 100 pixels; adjust as needed */
 }
 
-.image-container {
-  position: relative;
+.content {
+  position: relative; /* Positioned relative to make it scroll over the fixed background */
+  z-index: 1;
+  padding: 50px;
 }
 
 .image-overlay {
+  /* If you need the overlay, you can add it back */
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Add the dark overlay */
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Example black overlay with 50% transparency */
+  z-index: 0; /* Place it below the content */
+}
+
+
+.image-container {
+  position: relative;
 }
 
 .background-image {
@@ -23,17 +37,10 @@
   display: block;
 }
 
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
 h1 {
+  display: flex;
   font-size: 11em;
+  justify-content: center;
   color: white;
   margin-bottom: 20px;
 }
@@ -41,6 +48,7 @@ h1 {
 .locations {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  color: white;
   grid-gap: 10px;
   text-align: center;
   margin-top: 20px;
