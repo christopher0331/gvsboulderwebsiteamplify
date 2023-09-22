@@ -58,18 +58,34 @@ h1 {
   font-size: 38px;
   margin: 0;
 }
+/* Your existing CSS goes here */
 
+/* Mobile optimizations */
 @media screen and (max-width: 600px) {
+
+  .scrolling-section {
+    /* Use a standard (non-parallax) background on mobile */
+    background-attachment: scroll;
+    /* Adjust the height if needed */
+    height: 500px;
+  }
+
+  .content {
+    /* Adjust content padding for smaller screens */
+    padding: 20px;
+  }
+
   h1 {
-    font-size: 3em;
+    font-size: 2.5em; /* Adjust font size for mobile */
   }
 
   .locations {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* Stack locations vertically */
   }
 
   .locations p {
-    font-size: 1.2em;
-    width: 160px;
+    font-size: 1.5em; /* Adjust font size for mobile */
+    width: auto; /* Let the paragraph take the full width of its container */
   }
 }
+

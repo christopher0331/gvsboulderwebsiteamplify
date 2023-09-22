@@ -11,7 +11,7 @@ const Section = () => {
           <h1 className="intro">WELCOME TO GREENVIEW SOLUTIONS</h1>
         </div>
         <div className="section-description">
-          <p>Greenview Solutions is a fence company serving Arvada, CO, and the surrounding areas. Our team understands that your property is vital to your life, and keeping it secure and presentable is critical to your peace of mind. We are confident that our contractors are qualified and knowledgeable in installing fences on your property. Also, our experienced and skilled contractors can fix and manage any design changes you need for your property's fences.</p>
+          <p>Greenview Solutions is a fence company serving Boulder, CO, and the surrounding areas. Our team understands that your property is vital to your life, and keeping it secure and presentable is critical to your peace of mind. We are confident that our contractors are qualified and knowledgeable in installing fences on your property. Also, our experienced and skilled contractors can fix and manage any design changes you need for your property's fences.</p>
         </div>
         <div className="section-offerings">
           <h2>Greenview Solutions offers the following:</h2>

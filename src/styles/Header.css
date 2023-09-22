@@ -2,6 +2,7 @@
 a {
   z-index: 400;
 }
+
 .hero-image h2 {
   font-size: 4vw; /* Adjust as needed */
   margin: 0;
@@ -17,6 +18,7 @@ a {
   color: white; /* Or any desired color */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
 .header {
   background-color: #194b1e;
   height: 300px;
@@ -25,6 +27,8 @@ a {
   justify-content: space-between;
   position: relative;
   z-index: 10;
+  text-decoration: none;
+
 }
 
 .headerLogo {
@@ -71,7 +75,6 @@ a {
   display: flex;
   margin: 15px;
   padding: 1.4vw;
-
   transition: all 0.2s ease-in-out;
 }
 
@@ -82,11 +85,16 @@ a {
 
 #email, #phone {
   color: white;
+  text-decoration: none;
 }
 
 #email:hover, #phone:hover {
   color: lightblue;
   text-decoration: none;
+}
+#email:visited, #phone:visited {
+  text-decoration: none;
+  color: white; /* or any color you want for visited links */
 }
 
 .visitMainWebsiteButton {
