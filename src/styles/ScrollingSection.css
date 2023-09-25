@@ -1,20 +1,34 @@
 .scrolling-section {
   position: relative;
+  height: 700px;
   overflow: hidden;
-  color: white;
+  background-image: url("https://ik.imagekit.io/greenviewsolutions/featuredprojects/Project4/picture7?tr=w-900,h-900");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; /* Shifts the image up by 100 pixels; adjust as needed */
 }
 
-.image-container {
-  position: relative;
+.content {
+  position: relative; /* Positioned relative to make it scroll over the fixed background */
+  z-index: 1;
+  padding: 50px;
 }
 
 .image-overlay {
+  /* If you need the overlay, you can add it back */
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Add the dark overlay */
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Example black overlay with 50% transparency */
+  z-index: 0; /* Place it below the content */
+}
+
+
+.image-container {
+  position: relative;
 }
 
 .background-image {
@@ -23,17 +37,10 @@
   display: block;
 }
 
-.content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
 h1 {
+  display: flex;
   font-size: 11em;
+  justify-content: center;
   color: white;
   margin-bottom: 20px;
 }
@@ -41,6 +48,7 @@ h1 {
 .locations {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  color: white;
   grid-gap: 10px;
   text-align: center;
   margin-top: 20px;
@@ -50,18 +58,34 @@ h1 {
   font-size: 38px;
   margin: 0;
 }
+/* Your existing CSS goes here */
 
+/* Mobile optimizations */
 @media screen and (max-width: 600px) {
+
+  .scrolling-section {
+    /* Use a standard (non-parallax) background on mobile */
+    background-attachment: scroll;
+    /* Adjust the height if needed */
+    height: 500px;
+  }
+
+  .content {
+    /* Adjust content padding for smaller screens */
+    padding: 20px;
+  }
+
   h1 {
-    font-size: 3em;
+    font-size: 2.5em; /* Adjust font size for mobile */
   }
 
   .locations {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* Stack locations vertically */
   }
 
   .locations p {
-    font-size: 1.2em;
-    width: 160px;
+    font-size: 1.5em; /* Adjust font size for mobile */
+    width: auto; /* Let the paragraph take the full width of its container */
   }
 }
+
