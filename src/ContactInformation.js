@@ -23,9 +23,9 @@ const ContactInformation = () => {
                     <div>6526 Gunpark Dr Ste 370, #110</div>
                     <div>Boulder, CO</div>
                 </div>
-                <a href="mailto:brandon@greenviewsolutions.net">
+                <a href="mailto:admin@greenviewsolutions.net">
                     <div className="contactEmail" id="email">
-                        Email: brandon@greenviewsolutions.net
+                        Email: admin@greenviewsolutions.net
                     </div>
                 </a>
             </div>
