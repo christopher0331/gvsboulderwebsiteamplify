@@ -41,6 +41,11 @@
   font-weight: bold;
 }
 
+.box-link {
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Keeps the text color consistent, regardless of link state */
+}
+
 .oscillating-carousel-container {
   position: relative;
   overflow: hidden;
