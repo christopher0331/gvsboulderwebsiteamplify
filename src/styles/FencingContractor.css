@@ -1,0 +1,21 @@
+.fencing-contractor-page {
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add padding */
+    margin-top: -20px; /* Adjust the top margin to reduce white space */
+    color: #333; /* Set text color */
+    max-width: 800px; /* Set a max width for the content */
+    margin-left: auto; /* Center the content block horizontally */
+    margin-right: auto;
+  }
+
+  /* Reducing the top margin or padding of the first element inside the component */
+  .fencing-contractor-page > h1:first-child {
+
+    color: black;
+    font-size: 45px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  
+  /* Add additional styles as per your design requirements */
+  

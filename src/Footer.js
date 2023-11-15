@@ -22,6 +22,27 @@ const Footer = () => {
     { day: 'Sunday', hours: 'Closed' },
   ];
 
+
+  // New service areas
+  const serviceAreas = [
+    { name: 'Longmont', slug: 'longmont' },
+    { name: 'Loveland', slug: 'loveland' },
+    { name: 'Superior', slug: 'superior' },
+    { name: 'Erie', slug: 'erie' },
+    { name: 'Broomfield', slug: 'broomfield' },
+    { name: 'Thornton', slug: 'thornton' },
+    { name: 'Westminster', slug: 'westminster' },
+    { name: 'Arvada', slug: 'arvada' },
+    { name: 'Lafayette', slug: 'lafayette' },
+    { name: 'Louisville', slug: 'louisville' },   
+    { name: 'Golden', slug: 'golden' },
+    { name: 'Dacono', slug: 'dacono' },
+    { name: 'Frederick', slug: 'frederick' },
+    { name: 'Firestone', slug: 'firestone' },
+
+  ];
+
+
   return (
     <div className="footer-outter-container">
       <div className="links-container">
@@ -84,6 +105,19 @@ const Footer = () => {
               <FontAwesomeIcon className="icon" icon={faYelp} />
             </a>
           </div>
+
+          {/* Service Areas Section */}
+          <div className="service-areas">
+            <h4>Service Areas:</h4>
+            <ul className="service-areas-list">
+              {serviceAreas.map(area => (
+                <li key={area.slug} className="service-area-item">
+                  <a href={`/${area.slug}-fencing-contractor`}>{area.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <p className="footer-bottom">
             &copy; 2023 GreenView Solutions. All Rights Reserved. <a href="https://boulderfencingcontractor.com/sitemap.xml">Sitemap</a>. <a href="https://boulderfencingcontractor.com/accessibility">Accessibility Statement</a>
           </p>
