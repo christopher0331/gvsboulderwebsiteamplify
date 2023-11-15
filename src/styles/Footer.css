@@ -359,5 +359,38 @@
       margin-right: 10px; /* Add some margin between icons */
     }
 
-
   }
+
+  
+/* Service Areas Styles */
+.footer-outter-container .footer-middle .service-areas {
+  margin-top: 20px;
+}
+
+.footer-outter-container .footer-middle .service-areas h4 {
+  margin-bottom: 10px;
+  color: white; /* Set the color of the title */
+}
+
+.footer-outter-container .footer-middle .service-areas .service-areas-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Flex display for horizontal alignment */
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: flex-start; /* Align items to the start */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-outter-container .footer-middle .service-areas .service-areas-list .service-area-item {
+  margin-right: 15px; /* Space between items */
+  display: inline-block; /* Inline-block for horizontal layout */
+}
+
+.footer-outter-container .footer-middle .service-areas .service-areas-list .service-area-item a {
+  text-decoration: none;
+  color: #b2fba5; /* Lighter color for visibility on dark background */
+}
+
+.footer-outter-container .footer-middle .service-areas .service-areas-list .service-area-item a:hover {
+  color: #e0ffcc; /* Light hover color */
+}
